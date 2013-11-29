@@ -34,7 +34,6 @@ int main( int argc, char** argv )
 	cvNamedWindow(wndname, 1 );
 	//	cvNamedWindow
 	cvZero( image );
-	//将要显示的矩阵置零，即显示黑色
 	cvShowImage(wndname,image);
 	rng = cvRNG((unsigned)-1);
 	pt[0] = &(ptt[0]);
@@ -140,7 +139,7 @@ int main( int argc, char** argv )
 	}
 	cvInitFont( &font, CV_FONT_HERSHEY_COMPLEX, 3, 3, 0.0, 5, line_type );
 	//GetTextSize
-	cvGetTextSize( "I LOVE  YongQian!!", &font, &text_size, &ymin );
+	cvGetTextSize( "I LOVE  Mitali Soni!!", &font, &text_size, &ymin );
 	pt1.x = (width - text_size.width)/2;
 	pt1.y = (height + text_size.height)/2;
 	image2 = cvCloneImage(image);
@@ -148,7 +147,7 @@ int main( int argc, char** argv )
 	{
 		//SubS
 		cvSubS( image2, cvScalarAll(i), image, 0 );
-		cvPutText( image, "I LOVE  YQ!!", pt1, &font, CV_RGB(255,i,i));
+		cvPutText( image, "I LOVE  MS!!", pt1, &font, CV_RGB(255,i,i));
 		cvShowImage(wndname,image);
 		cvWaitKey(DELAY);
 	}
