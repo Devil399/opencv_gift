@@ -139,7 +139,7 @@ int main( int argc, char** argv )
 	}
 	cvInitFont( &font, CV_FONT_HERSHEY_COMPLEX, 3, 3, 0.0, 5, line_type );
 	//GetTextSize
-	cvGetTextSize( "I Like You!!", &font, &text_size, &ymin );
+	cvGetTextSize( "I am Sorry!!", &font, &text_size, &ymin );
 	pt1.x = (width - text_size.width)/2;
 	pt1.y = (height + text_size.height)/2;
 	image2 = cvCloneImage(image);
@@ -147,7 +147,7 @@ int main( int argc, char** argv )
 	{
 		//SubS
 		cvSubS( image2, cvScalarAll(i), image, 0 );
-		cvPutText( image, "I LIKE  MS!!", pt1, &font, CV_RGB(255,i,i));
+		cvPutText( image, "I LIKE  You!!", pt1, &font, CV_RGB(255,i,i));
 		cvShowImage(wndname,image);
 		cvWaitKey(DELAY);
 	}
